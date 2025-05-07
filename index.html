@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Образовательный портал</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+  <section class="sidebar">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__content">
+        <p class="sidebar__title">NINJA SCHOOL</p>
+        <div class="line"></div>
+        <ul class="courses">Наши курсы
+          <a href="#"><li>Frontend</li></a>
+          <a href="#"><li>Docker</li></a>
+          <a href="#"><li>Backend</li></a>
+        </ul>
+        
+      </div>
+
+
+    </div>
+  </section>
+  <section class="menu">
+    <ul class="menu__wrapper">
+      <a href="#"><li>О сайте</li>
+        <div class="line"></div>
+      </a>
+      <a href="#"><li>Цели</li>
+        <div class="line"></div>
+      </a>
+      <a href="#"><li>Доступный материал</li>
+        <div class="line"></div>
+      </a>
+      <a href="#"><li>Контакты</li>
+        <div class="line"></div>
+      </a>
+    </ul>
+  </section>
+  <section class="about">
+    <h1 class="title">Время - самый ценный ресурс!</h1>
+    <div class="clock">
+    <div class="dot" id="blinking-dot"></div>
+      <!-- Часовые цифры -->
+    <div class="number" style="--i:1" data-num="1"></div>
+    <div class="number" style="--i:2" data-num="2"></div>
+    <div class="number" style="--i:3" data-num="3"></div>
+    <div class="number" style="--i:4" data-num="4"></div>
+    <div class="number" style="--i:5" data-num="5"></div>
+    <div class="number" style="--i:6" data-num="6"></div>
+    <div class="number" style="--i:7" data-num="7"></div>
+    <div class="number" style="--i:8" data-num="8"></div>
+    <div class="number" style="--i:9" data-num="9"></div>
+    <div class="number" style="--i:10" data-num="10"></div>
+    <div class="number" style="--i:11" data-num="11"></div>
+    <div class="number" style="--i:12" data-num="12"></div>
+      <!-- Стрелки -->
+      <div class="hand hour" id="hour-hand"></div>
+      <div class="hand minute" id="minute-hand"></div>
+      <div class="hand second" id="second-hand"></div>
+    </div>
+
+  </section>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

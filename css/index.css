@@ -1,0 +1,187 @@
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+  }
+  
+a:visited {
+  color: #C0C0C0;
+  }
+  
+a:hover {
+  color: #00FF00;
+  }
+
+.sidebar__wrapper {
+  display: flex;
+  position: fixed;
+  background-color: #30363d;
+  height: 100vh;
+  width: 300px;
+}
+
+
+.sidebar__content {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar__title {
+  color: #fff;
+  font-size: 48px;
+  padding-top: 25px;
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sidebar__title:hover {
+  color: #00FF00;
+}
+
+.line {
+  height: 0.1px;
+  background-color: #C0C0C0;
+  width: 100%;
+}
+
+.courses {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #C0C0C0;
+  padding-left: 0px;
+  li {
+    padding-top: 10px;
+  }
+
+}
+
+.courses:hover {
+  color: #DAA520;
+}
+
+.menu {
+  margin-left: 300px;
+  padding-top: 20px;
+
+}
+
+.menu__wrapper {
+  height: 100%;
+  color: #191970;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  align-items: center;
+  .line {
+    height: 1.5px;
+    background-color: #DAA520;
+    display: none;
+  }
+ 
+  li:hover {
+    color: #DAA520;
+  }
+  a:hover {
+    color: #DAA520;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    .line {
+      display: block;
+    }
+  }
+  a:visited {
+    color: #191970;
+  }
+}
+
+.about {
+  height: 100vh;
+  margin-left: 300px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #333;
+  border-radius: 50%;
+  margin: 50px auto;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+  transition: transform 0.05s linear;
+}
+
+.hour {
+  width: 6px;
+  height: 70px;
+  background: #333;
+  z-index: 3;
+}
+
+.minute {
+  width: 4px;
+  height: 100px;
+  background: #666;
+  z-index: 2;
+}
+
+.second {
+  width: 2px;
+  height: 120px;
+  background: red;
+  z-index: 1;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(var(--i) * 30deg));
+}
+
+.number::before {
+  content: attr(data-num);
+  display: block;
+  position: absolute;
+  transform: rotate(calc(var(--i) * -30deg));
+  transform-origin: center;
+  top: -140px; /* радиус размещения — подбирай под размер часов */
+  left: -15px; /* половина ширины цифры */
+  width: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px red;
+}
